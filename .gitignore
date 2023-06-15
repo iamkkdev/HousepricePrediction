@@ -1,6 +1,5 @@
-*..ipynb
+*.ipynb
 .vscode
 images
-.DS_Store
+*.DS_Store
 suggestions.md
-.git
