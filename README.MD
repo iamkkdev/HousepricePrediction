@@ -1,8 +1,19 @@
-### Problem Statement:
+## Background
 
-### Real Estate Firm located in Ames, IA wants to know what are the most important factors that are affecting the housing saleprice in Ames, that should help them in budget estimations for their future real estate projects
+The problem revolves around predicting the house prices in Ames, Iowa, based on various features provided in the dataset. The goal is to develop a regression model that accurately estimates the sale price of a house using the available information.
 
-#### [Data Dictionary](https://www.kaggle.com/competitions/project-2-regression-challenge-123/data)
+The Ames, Iowa dataset obtained from Kaggle contains a comprehensive set of features related to residential properties, including information about the physical attributes, location, and other relevant characteristics. By analyzing these features and their relationships with the sale prices, the aim is to build a predictive model that can assist in determining the approximate value of a house in the Ames area.
+
+The challenge lies in identifying the most influential features that significantly impact the house prices and constructing a robust regression model that can effectively capture the underlying patterns and variations in the data. Additionally, addressing potential issues such as missing values, outliers, and categorical variables requires careful preprocessing and feature engineering to ensure accurate predictions.
+
+Ultimately, the developed model should be capable of accurately estimating the sale price of a house in Ames, Iowa, based on the given set of features, enabling individuals and real estate professionals to make informed decisions regarding property transactions in the area.
+
+### The Data
+
+The Data was obtained from Kaggle [click here to download the data](https://www.kaggle.com/competitions/project-2-regression-challenge-123/data)
+
+### Some of the important features from the data
+
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
@@ -18,17 +29,40 @@
 |**saleprice**|*float*|Ames,IA Houseprices|The property's Saleprice in Dollars|
 
 
-#### Imported Dataset and performed data cleaning, missing value imputations and outlier checks
-#### Data contains about 81 columns and 2051 rows
-#### Checked correlation wiith heatmaps
-#### Performed Linear Regression using four numerical variables that are highly correlated and achieved an rsquared score of 73 on train and 77 on test data
-#### Compared model with the baseline model
-#### Performed dummy encoding using onehot encoder and pipelines
-#### Introduced categorical variables into the model and removed one numeric variable
-#### Tried and tested various models using column transformers and pipelines 
-#### Generated MSE, RMSE and MAE
-#### Checked interactions between numeric varaiables and scaled the variables
-#### Finally achieved rsquared score of 83.9% using 9 variables out of 81 variables
+
+## Part I
+
+#### Data Cleaning and Exploratory Data Analysis
+
+- Data was obtained from Kaggle and some columns with more than 50% missing data were removed and other columns with lesser missing values were imputed with different imputation methods. Data was split into numerical and categorical features for cleaning and data exploration. Missing data in categorical columns were imputed with most frequent values.
+
+- Outlier checks were performed using boxplots
+
+- Some of the outliers were capped at 75th percentile values and correlation between numeric variables were checked using heatmaps in seaborn library.
+
+![Sales Price Distribution](../images/distribution.png)
+
+## Part II
+
+#### Preprocessing
+
+- Performed dummy encoding of categorical variables using onehotencoder
+- scaling was performed using standardscaler
+- Pipelines were used to train the model
+- Dummyregressor was used to compare the model with baseline model
+- Polynomial features was used to check the interactions between the variables
+
+
+## Part III
+
+#### Feature Extraction and Modeling
+
+- Performed Linear Regression using four numerical variables that are highly correlated and achieved an rsquared score of 73 on train and 77 on test data
+- Compared model with the baseline model
+- Introduced categorical variables into the model and removed one numeric variable
+- Tried and tested various models using column transformers and pipelines 
+- Generated MSE, RMSE and MAE and compared with baseline 
+- Finally achieved rsquared score of 83.9% using 9 variables out of 81 variables
 
 **Baseline MSE: 5983691627.56332**
 **Test MSE: 938053042.9447733**
@@ -47,8 +81,8 @@
 
 ### Conclusion:
 
-#### The most important factors that are determining the saleprice in Ames, IA are Overall quality of the house, Ground Living area, Garage area, Kitchen Quality, which are explaining about 78% varaiability in saleprice, other factors like Kitchen Quality, Neighborhood, External Quality, MS Zoning that is zoning classification are also important for people purchasing a house in Ames. For instance if the house falls under Floating village residential zoning the average sale price is about 200,000USD and the neighborhood Stonebrook looks to be in high demand and neighborhoods like Meadow village and Briardale have an average saleprice of 100,000 USD.
+The most important factors that are determining the saleprice in Ames, IA are Overall quality of the house, Ground Living area, Garage area, Kitchen Quality, which are explaining about 78% varaiability in saleprice, other factors like Kitchen Quality, Neighborhood, External Quality, MS Zoning that is zoning classification are also important for people purchasing a house in Ames. For instance if the house falls under Floating village residential zoning the average sale price is about 200,000USD and the neighborhood Stonebrook looks to be in high demand and neighborhoods like Meadow village and Briardale have an average saleprice of 100,000 USD.
 
 ### Next steps 
 
-#### There may be other factors influencing house prices like interest rates, Government subsidies and inflation. We may need to include these factors as well for accurate predictions as real estate prices have high association with interest rates along with the factors that were mentioned in conclusion
+There may be other factors influencing house prices like interest rates, Government subsidies and inflation. We may need to include these factors as well for accurate predictions as real estate prices have high association with interest rates along with the factors that were mentioned in conclusion
