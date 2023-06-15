@@ -32,7 +32,7 @@ The Data was obtained from Kaggle [click here to download the data](https://www.
 
 ## Part I
 
-#### Data Cleaning and Exploratory Data Analysis
+- [x] Data Cleaning and Exploratory Data Analysis
 
 - Data was obtained from Kaggle and some columns with more than 50% missing data were removed and other columns with lesser missing values were imputed with different imputation methods. Data was split into numerical and categorical features for cleaning and data exploration. Missing data in categorical columns were imputed with most frequent values.
 
@@ -44,7 +44,7 @@ The Data was obtained from Kaggle [click here to download the data](https://www.
 
 ## Part II
 
-#### Preprocessing
+- [x] Preprocessing
 
 - Performed dummy encoding of categorical variables using onehotencoder
 - scaling was performed using standardscaler
@@ -55,7 +55,7 @@ The Data was obtained from Kaggle [click here to download the data](https://www.
 
 ## Part III
 
-#### Feature Extraction and Modeling
+- [x] Feature Extraction and Modeling
 
 - Performed Linear Regression using four numerical variables that are highly correlated and achieved an rsquared score of 73 on train and 77 on test data
 - Compared model with the baseline model
