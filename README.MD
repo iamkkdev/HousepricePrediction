@@ -40,7 +40,7 @@ The Data was obtained from Kaggle [click here to download the data](https://www.
 
 - Some of the outliers were capped at 75th percentile values and correlation between numeric variables were checked using heatmaps in seaborn library.
 
-![Sales Price Distribution](../images/distribution.png)
+![Sales Price](../images/distribution.png)
 
 ## Part II
 
